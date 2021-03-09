@@ -1,0 +1,565 @@
+<html>
+    <head>
+        <style>
+
+            :root {
+                --blue: #6495ed;
+                --white: #faf0e6;
+                --nav-height: 100px;
+            }
+
+            @font-face {
+                font-family: ItcavantgardestdBk;
+                src: url('./assets/fonts/ItcavantgardestdBk.otf');
+            }
+
+            @font-face {
+                font-family: NetPoppinsMedium;
+                src: url('./assets/fonts/Net-Poppins-Medium.ttf');
+            }
+            @font-face {
+                font-family: NetSFMonoRegular;
+                src: url('./assets/fonts/Net-SFMono-Regular.ttf');
+            }
+            
+
+            body{
+                background-color: #141422;
+                margin:0 !important;
+                font-family: NetPoppinsMedium;
+            }
+
+            .header {
+                background-color: rgba(20,20,34,0.85);
+                color: #d0d0d2;
+                height: var(--nav-height);
+                display: flex;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: center;
+                align-items: center;
+                position: fixed;
+                top: 0px;
+                z-index: 11;
+                width: 100%;
+                backdrop-filter: blur(10px);
+                transition: var(--transition);
+                filter: none !important;
+                pointer-events: auto !important;
+                user-select: auto !important;
+                font-family: ItcavantgardestdBk;
+            }
+            
+
+            ul.nav-list {
+                list-style-type: none;
+            }
+
+            .nav-list li {
+                display: inline;
+                padding: 10px;
+            }
+
+            .menu {
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+            }
+
+            .icon-holder {
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+            } 
+
+            nav {
+                display: flex;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: center;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                color: var(--lightest-slate);
+                font-family: var(--font-mono);
+                counter-reset: item 0;
+                z-index: 12;
+                padding: 20px 50px;
+            }
+            
+            .root {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+
+            main {
+                margin: 0px auto;
+                max-width: 1600px;
+                min-height: 100vh;
+            }
+
+            .hero {
+                color: #d0d0d2;
+                display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                flex-direction: column;
+                align-items: flex-start;
+                margin:0px auto;
+                align-items: flex-start;
+                min-height: 100vh;
+                max-width: 900px;;
+            }
+
+            button.download-button {
+                background: none;
+                padding: 15px 23px;
+                font-size: 15px;
+                border: 2px solid #189287;
+                font-weight: bold;
+                margin-top: 35px;
+                color: 189287;
+                cursor: pointer;
+                font-family: NetSFMonoRegular;
+            }
+
+            .yellowish {
+                color: #F0EEC5;
+            }
+
+            .experience {
+                font-weight: 400;
+            }
+
+            ul.experience-list {
+                padding: 0;
+            }
+
+            .experience-list li {
+                list-style: none;
+                padding: 10px 20px;
+                margin-bottom: 5px;
+                width: 125px;
+                position: relative;
+            }
+
+            .experience-list li.active {
+                background: #d8c13a;
+                font-weight: bold;
+                color: black;
+            }
+            
+            .triangle-right {
+                position: absolute;
+                height: 0;
+                border-top: 19px solid transparent;
+                border-left: 35px solid #d8c13a;
+                border-bottom: 19px solid transparent;
+                top: 0;
+                right: -35px;
+            }
+
+            .work-detail li {
+                padding: 8px 0px;
+            }
+
+            ul.companies {
+                margin-top: 20px    ;
+                list-style: none;
+                display: block;
+                width: inherit;
+                overflow: overlay;
+                padding: 0;
+            }
+
+            ul.companies::-webkit-scrollbar {
+                display: none;
+            }
+
+            .company-logos {
+                margin-top: 35px;
+                width: -webkit-fill-available;
+            }
+
+            .companies li {
+                padding-left: 15px;
+                padding-right: 15px;
+                display:table-cell;
+                text-align:center;
+                vertical-align: middle;
+            }
+
+            h2, h3 {
+                font-family: ItcavantgardestdBk;
+            }
+
+            .project-details-holder .label {
+                color: #f0eec5; font-size: 12px
+            }
+
+            .project-details-holder h3 {
+                margin-top: 2px;
+                font-size: 15px;
+            }
+
+            .project-details {
+                padding: 15px;
+                background: rgba(38, 38, 51, 0.8);
+            }
+
+            p {
+                font-weight: 100;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .title {
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                width: 90%;
+            }
+
+            .title::after {
+                content: "";
+                display: flow-root;
+                position: relative;
+                top: -3px;
+                width: 300px;
+                height: 1;
+                margin-left: 20px;
+                background-color: #16294a;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="root">
+            <div class="header">
+                <nav>
+                    <div class="icon-holder">
+                        MS 
+                    </div>
+
+                    <div >
+                        <ul class="nav-list">
+                            <li> <span style="color:#189287">01.</span> About Me </li>
+                            <li> <span style="color:#189287">02.</span> Experience </li>
+                            <li> <span style="color:#189287">03.</span> Portfolio </li>
+                            <li> <span style="color:#189287">04.</span> Contact Me </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="content">
+                <main style="padding: 0px 100px;">
+                    <section class="hero">
+                        <div style="font-size: 5em;">Hi<span style="color:#189287">!</span> </div>
+                        <div style="font-size: 5em;">I'm Mark Sabelita,</div>
+                        <div style="margin-top: 10px; font-size: 2.2em;"> <span class="yellowish"> I worked as a </span> <span class="experience"> </span></div>
+                        <button class="download-button">
+                            Resume
+                        </button>
+                    </section>
+
+
+                    <section class="hero">
+                        <h2 class="title">
+                            <span style="color: #189287; margin-right: 10px"> 01. </span>About Me 
+                        </h2> 
+                        <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 50px;">
+                            <div class="details">
+                                <div>
+                                    <p>
+                                        I am a <span style="color: #189287"> Fullstack developer </span> with more than 7 years of experience  in web and cross platform development. 
+                                    </p>
+                                    <p>
+                                        I work with various fields like gaming, telecommunication, travels, crm and medical fields.
+                                    </p>
+                                    <p>
+                                        List are the the technologies I've used for the past 7 years: 
+                                    </p>
+                                </div>
+                                <br/>
+
+                                <div>
+                                    <p class="yellowish" style="font-weight: bold;"> Backend technologies: </p>
+                                    <p> NodeJS, ExpressJS, Laravel, CodeIgniter, Serverless, AWS </p>
+                                </div>
+                                <div>
+                                    <p class="yellowish" style="font-weight: bold;"> Frontend technologies: </p>
+                                    <p> Angular, React, ES6+, Typescript, Wordpress </p>
+                                </div>
+                                <div>
+                                    <p class="yellowish" style="font-weight: bold;"> Cross platform technologies: </p>
+                                    <p> Ionic6, Electron. </p>
+                                </div>
+                            </div>
+                            <div class="image" style="width: 300px; background: #000; margin: 0 auto;">
+                                <div class="box"> </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+                    <section class="hero" style="max-width: 810px;">
+                        <h2 class="title">
+                            <span style="color: #189287; margin-right: 10px"> 02. </span>Working Experience
+                        </h2> 
+
+                        <div style="display: grid; grid-template-columns: 2fr 10fr; gap: 50px; margin-top: 30px;">
+                            <div class="details" style="width: 200px">
+                                <div class="company-header">
+                                    <ul class="experience-list">
+                                        <li class="active"> PCCW Solutions 
+                                            <div class="triangle-right"> </div>
+                                        </li>
+                                        <li> Freelancer </li>
+                                        <li> Outsourced.ph </li>
+                                        <li> SkyCable </li>
+                                        <li> Coreserve </li>
+                                        <li> Zeenoh </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="roles">
+                                <div>
+                                    <h3>IO6 Solutions Developer @ <span style="color: #f0eec5">PCCW Solutions</span> </h3>
+                                    <div>
+                                        <ul class="work-detail">
+                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante velit, aliquet a rutrum lacinia, pretium non ante.</li>
+                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. pretium non ante.</li>
+                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante velit, aliquet a rutrum lacinia, pretium non ante. Pellentesque gravida nec nisi eu ullamcorper. Mauris tincidunt sem accumsan</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        Tech stack : Angular 8, NodeJs, Java
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="company-logos">
+                            <h3 style="color: #f0eec5"> Companies  </h3>
+                            <ul class="companies">
+                                <li>
+                                    <img src="./assets/company/pccw.png" style="width: 160px;" alt="">
+                                </li>
+                                <li>
+                                    <img src="./assets/company/hai.png" style="width: 160px;" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="./assets/company/global.svg" style="width: 160px;" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="./assets/company/outsourced.png" style="width: 160px;" alt="">
+                                </li>
+                                
+                                <li>
+                                    <img src="./assets/company/sky.png" style="width: 160px;" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="./assets/company/cs.png" style="width: 70px;" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="./assets/company/zeenoh.png" style="width: 120px;" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="hero">
+                        <h2 class="title">
+                            <span style="color: #189287; margin-right: 10px"> 03. </span> Projects I've work with
+                        </h2> 
+                        <div class="projects"  style="display: grid; grid-template-columns: 6fr 6fr; gap: 50px; margin-top: 30px;">
+                            <div class="project-details">
+                                <div class="project-details-holder">
+                                    <span class="label"> Project </span>
+                                    <h3 > OHSC Admin </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Company </span>
+                                    <h3 > OHSC (South Africa) </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Details </span>
+                                    <h3 > Administrator panel for OHSC website, this project track hospital status and generates reports. </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Technologies </span>
+                                    <h3 > Linux Server, CodeIgniter, Typescript, NodeJs </h3>
+                                </div>
+                            </div>
+
+                            <div class="image-holder">
+                                <img src="./assets/projects/ohsc.png" style="width: 550px;height: 314px;" alt="">
+                            </div>
+                        </div>
+
+                        <div class="projects"  style="display: grid; grid-template-columns: 6fr 6fr; gap: 50px; margin-top: 50px;">
+                            <div class="image-holder">
+                                <img src="./assets/projects/ohsc-offiline.png" style="width: 550px;height: 314px;" alt="">
+                            </div>
+
+                            <div class="project-details">
+                                <div class="project-details-holder">
+                                    <span class="label"> Project </span>
+                                    <h3 > OHSC Offline  </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label">Company </span>
+                                    <h3 > OHSC (South Africa) </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Details </span>
+                                    <h3 > Inspector's access that includes set of questioner used for hospital assessment. </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Technologies </span>
+                                    <h3 > Angular, Ionic, Electron, Typescript, NodeJs </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="projects"  style="display: grid; grid-template-columns: 6fr 6fr; gap: 50px; margin-top: 50px;">
+                            <div class="project-details">
+                                <div class="project-details-holder">
+                                    <span class="label"> Project </span>
+                                    <h3 > CRM Product </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Company </span>
+                                    <h3 > PCCW (HK/Philippines)  </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Details </span>
+                                    <h3 > Project Involvement includes Customer Portal and UAM. </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Technologies </span>
+                                    <h3 > Angular, Typescript, ES6 </h3>
+                                </div>
+                            </div>
+
+                            <div class="image-holder">
+                                <img src="./assets/projects/pccw.png" style="width: 550px;height: 314px;" alt="">
+                            </div>
+                        </div>
+
+                        <div class="projects"  style="display: grid; grid-template-columns: 6fr 6fr; gap: 50px; margin-top: 50px;">
+                            <div class="image-holder">
+                                <img src="./assets/projects/gworld.png" style="width: 550px;height: 314px;" alt="">
+                            </div>
+
+                            <div class="project-details">
+                                <div class="project-details-holder">
+                                    <span class="label"> Project </span>
+                                    <h3 > gWorld </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Company </span>
+                                    <h3 > Global works and travel (Australia) </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Details </span>
+                                    <h3 > User panel for global works and travel clients where user can book destination, display details about booking details and offers. </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Technologies </span>
+                                    <h3 > AWS, NodeJs, Serverless, ECS, Angular, Typescript </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="projects"  style="display: grid; grid-template-columns: 6fr 6fr; gap: 50px; margin-top: 50px;">
+                            <div class="project-details">
+                                <div class="project-details-holder">
+                                    <span class="label"> Project </span>
+                                    <h3 > IRSM - Integrated Remote Monitoring System </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Company </span>
+                                    <h3 > SkyCable (Philippines) </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Details </span>
+                                    <h3 > Monitoring system for all cable and network devices of skycable. System help with monitoring and analysis for network and hardware status. </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Technologies </span>
+                                    <h3 > Linux Server, Laravel, Angular, Typescript, NodeJs, Bash </h3>
+                                </div>
+                            </div>
+
+                            <div class="image-holder">
+                                <img src="./assets/projects/irsm.jpeg" style="width: 550px;height: 314px;" alt="">
+                            </div>
+                        </div>
+
+                        <div class="projects"  style="display: grid; grid-template-columns: 6fr 6fr; gap: 50px; margin-top: 50px;">
+                            <div class="image-holder">
+                                <img src="./assets/projects/epg.png" style="width: 550px;height: 314px;" alt="">
+                            </div>
+
+                            <div class="project-details">
+                                <div class="project-details-holder">
+                                    <span class="label"> Project </span>
+                                    <h3 > EPG - Electronic Program Guide </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Company </span>
+                                    <h3 > SkyCable (Philippines) </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Details </span>
+                                    <h3 > System allow administrator to push and view program guides for skycable channels, this system also allow bulk insert or imports of excel file for a fast and easy way to upload. </h3>
+                                </div>
+
+                                <div class="project-details-holder">
+                                    <span class="label"> Technologies </span>
+                                    <h3 > Linux Server, React, Redux, NodeJs, Bash </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous"></script>
+        <script>
+        var typed = new Typed('.experience', {
+            strings: ['' ,'Frontend Developer.', 'Backend Developer.', 'Cross platform Developer.'],
+            typeSpeed: 50,
+            loop: true,
+        });
+        </script>
+    
+    </body>
+</html>
